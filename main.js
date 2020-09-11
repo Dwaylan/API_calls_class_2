@@ -1,5 +1,10 @@
 'use strict'
 
+// Goal of the app
+// Who's that Pokemon pokedex
+// Have the user input a set list of parameters and return the pokemon in response
+// It can be, number, type, or skill set 
+
 // Connection test. The string should load in the online terminal if connected.
 console.log('Success! main.js is now connected')
 
@@ -27,7 +32,7 @@ let jsonPromise = pokePromise.then(function(data){
 console.log('after fetch call')
 
 jsonPromise.then(function(json){
-    
+
 })
 
 // jsonPromise.then(function(json){
@@ -52,10 +57,7 @@ jsonPromise.then(function(json){
 
 
 
-// ***load pokemon to page with abilities first*** 
-// Have player pick starter pokemon for battle and then go up against computer
-// elemental weakness in the if statments 
-// fire is weak to water but super-effective to grass etc. 
+
 
 
 
