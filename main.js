@@ -26,6 +26,10 @@ let jsonPromise = pokePromise.then(function(data){
 
 console.log('after fetch call')
 
+jsonPromise.then(function(json){
+    
+})
+
 // jsonPromise.then(function(json){
 //     console.log('have an actual payload',json)
 //     process(json.results)
