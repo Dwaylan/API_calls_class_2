@@ -32,13 +32,10 @@ let jsonPromise = pokePromise.then(function(data){
 console.log('after fetch call')
 
 jsonPromise.then(function(json){
-
+    console.log('retrieving the actual payload', json);
+    process(json.results)
 })
-
-// jsonPromise.then(function(json){
-//     console.log('have an actual payload',json)
-//     process(json.results)
-// })
+//  we have now recieved our actual payload or data, and it his been logged
 
 // This is a function to process the pokemon we received from our API
 // function process(pokemon){
@@ -52,6 +49,18 @@ jsonPromise.then(function(json){
 
 //         let td = document.createElement("td")
 //         table.appendChild(td)
+
+// This creates and image element and appends it to the HTML so we have a
+// place to store our image files 
+            // let img = document.createElement("img")
+            // td.appendChild(img)
+
+//  So we have something to hold the images, but now we need code to mediate
+// and tell our images where to go.
+
+            // let pokePics = 
+
+
 //     });
 // }
 
