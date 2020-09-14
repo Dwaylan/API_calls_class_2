@@ -27,6 +27,10 @@ let jsonPromise = pokePromise.then(function(data){
 // with the returned data. At his point the json data did not return the payload
 // but the promise has been made
 
+// ***Comprehension check: What is json? json, or JavaScript Object Notation is what FORMATS information
+// from the server to the webpage in a way that is readable for JavaScript. If API is the means of how we
+// request things from the server, then json is what makes that data from our server readable to JS***
+
 });
 
 console.log('after fetch call')
@@ -37,40 +41,46 @@ jsonPromise.then(function(json){
 })
 //  we have now recieved our actual payload or data, and it his been logged
 
-// This is a function to process the pokemon we received from our API
-// function process(pokemon){
-//     let table = document.getElementById('pokedex')
+function process(pokeBall){
+// We're going to use this function to process and place our pokemon payload
 
-//     pokemon.forEach(function(pokemon){
-//         console.log(pokemon.name)
+        let ul = document.getElementById("Pokemon")
 
-//         let tr = document.createElement("tr")
-//         table.appendChild(tr)
+// Creating an li element in the js file and appending it to the li on the HTML
+// This will create the link to from the payload to the HTML but we still need a 
+// Vehichle or means to get us there.
+        let li = document.createElement("li")
+        ul.appendChild(li)
 
-//         let td = document.createElement("td")
-//         table.appendChild(td)
-
-// This creates and image element and appends it to the HTML so we have a
-// place to store our image files 
-            // let img = document.createElement("img")
-            // td.appendChild(img)
-
-//  So we have something to hold the images, but now we need code to mediate
-// and tell our images where to go.
-
-            // let pokePics = 
+// If the code above is our link or passageway, then the code below is our vehicle
+// to get information from the JS to the HTML 
 
 
-//     });
-// }
+// The same process will be repeated for our Pokemon names 
+        let name = document.createElement("name")
+        ul.appendChild(name)
+
+// The code below will be the vehichle to drive the the names to the HTML
+// We've created a variable acesses the names arrays in the results
+        let pokeNames = results.name.name
+
+// Now it's time to access the inner text of the name drive and place our pokemon
+// names there
+        name.innerText = pokeNames;
+
+// *** Recap: 1.) Created an element called name. 2.) Appended that elemennt to the HTML
+// 3.) Created a variable called pokeNames to acces the pokemon names.
+// 4.) placed our pokeNames variable in the inner text of our name element.
+
+// Now we are going to give the button a purpose. First we are going to grab our
+// pokePromise which initializes the fetching from our API 
+document.getElementById("starter").addEventListener("click",function () {
+    pokePromise
+})
+}
 
 
 
 
 
 
-
-// jsonPromise.then(function(json){
-//     console.log('have an actual payload', json);
-//     Process(json.results)
-// })
