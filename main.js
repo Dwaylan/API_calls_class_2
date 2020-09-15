@@ -8,7 +8,7 @@
 // Connection test. The string should load in the online terminal if connected.
 console.log('Success! main.js is now connected')
 
-let pokePromise = window.fetch("https://pokeapi.co/api/v2/pokemon/");
+let pokePromise = window.fetch("https://pokeapi.co/api/v2/pokemon/?limit=150&offset=6");
 // fetch requires a request input. It is asking where you would like it to 
 // fetch data from. We created a variable that requests data to be fetched from
 // the random user API and holds it as a promise. Remember that when we use the promise
@@ -40,6 +40,7 @@ jsonPromise.then(function(json){
     process(json.results)
 })
 //  we have now recieved our actual payload or data, and it his been logged
+//  we use dot notation to specifically extract the results arrays out of the payload
 
 function process(pokeBall){
 // We're going to use this function to process and place our pokemon payload
@@ -62,7 +63,7 @@ function process(pokeBall){
 
 // The code below will be the vehichle to drive the the names to the HTML
 // We've created a variable acesses the names arrays in the results
-        let pokeNames = results.name.name
+        let pokeNames = 
 
 // Now it's time to access the inner text of the name drive and place our pokemon
 // names there
