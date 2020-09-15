@@ -40,10 +40,16 @@ jsonPromise.then(function(json){
     console.log('retrieving the actual payload', json);
     process(json.results)
 })
-//  we have now recieved our actual payload or data, and it his been logged
-//  we use dot notation to specifically extract the results arrays out of the payload
+// we have now recieved our actual payload or data, and it his been logged
+// we use dot notation to specifically extract the results arrays out of the payload
 
-function process(pokeBall){
+// I am now creating a variable to process the names of the pokemon 
+// For each pokemon I want to lon "Your pokemon is:" next to a corresponding name
+function process(pocketMonsters){
+
+    pocketMonsters.forEach(function(name){
+        console.log('Your pokemon is:', name.name )
+    })
 // We're going to use this function to process and place our pokemon payload
 
         let ul = document.getElementById("Pokemon")
@@ -59,16 +65,16 @@ function process(pokeBall){
 
 
 // The same process will be repeated for our Pokemon names 
-        let name = document.createElement("name")
-        ul.appendChild(name)
+        let pokeName = document.createElement("pokeName")
+        li.appendChild(pokeName)
 
 // The code below will be the vehichle to drive the the names to the HTML
 // We've created a variable acesses the names arrays in the results
-        let pokeNames = 
+        let whosThatPokemon = name.name
 
 // Now it's time to access the inner text of the name drive and place our pokemon
 // names there
-        name.innerText = pokeNames;
+        name.innerText = whosThatPokemon;
 
 // *** Recap: 1.) Created an element called name. 2.) Appended that elemennt to the HTML
 // 3.) Created a variable called pokeNames to acces the pokemon names.
@@ -77,7 +83,7 @@ function process(pokeBall){
 // Now we are going to give the button a purpose. First we are going to grab our
 // pokePromise which initializes the fetching from our API 
 document.getElementById("starter").addEventListener("click",function () {
-    pokePromise
+    pocketMonsters
 })
 }
 
