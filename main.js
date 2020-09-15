@@ -1,9 +1,10 @@
 'use strict'
 
 // Goal of the app
-// Who's that Pokemon pokedex
-// Have the user input a set list of parameters and return the pokemon in response
-// It can be, number, type, or skill set 
+// Find your starting team
+// When the "let your journey begin" button is clicked it will generate 6 random
+// pokemon from the original 150 in the Kanto pokedex
+// The second fetch should give you a skillset
 
 // Connection test. The string should load in the online terminal if connected.
 console.log('Success! main.js is now connected')
