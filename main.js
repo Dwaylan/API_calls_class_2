@@ -9,7 +9,7 @@
 // Connection test. The string should load in the online terminal if connected.
 console.log('Success! main.js is now connected')
 
-let pokePromise = window.fetch("https://pokeapi.co/api/v2/pokemon/?limit=150&offset=6");
+let pokePromise = window.fetch("https://pokeapi.co/api/v2/pokemon/?limit=150&offset=0");
 // fetch requires a request input. It is asking where you would like it to 
 // fetch data from. We created a variable that requests data to be fetched from
 // the random user API and holds it as a promise. Remember that when we use the promise
